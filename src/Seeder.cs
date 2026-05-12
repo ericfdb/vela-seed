@@ -102,6 +102,8 @@ public static class Seeder
                 Console.WriteLine(ok
                     ? $"OK ({sw.ElapsedMilliseconds}ms)"
                     : $"OK — NCPDP {ncpdpCode} ({sw.ElapsedMilliseconds}ms)");
+                if (!ok)
+                    Console.WriteLine($"       {body[..Math.Min(body.Length, 300)]}");
                 return new SeedResult(seed.MessageType, messageId, true, (int)response.StatusCode, ncpdpCode, sw.ElapsedMilliseconds);
             }
 

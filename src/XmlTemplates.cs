@@ -318,6 +318,7 @@ public static class XmlTemplates
                         <City>JONESVILLE</City>
                         <StateProvince>TN</StateProvince>
                         <PostalCode>37777</PostalCode>
+                        <CountryCode>US</CountryCode>
                     </Address>
                     <CommunicationNumbers>
                         <PrimaryTelephone>
@@ -463,6 +464,13 @@ public static class XmlTemplates
                     {p.PharmacyNpiXml}
                 </Identification>
                 <BusinessName>HUMANA</BusinessName>
+                <Address>
+                    <AddressLine1>7789 Smackers Lane</AddressLine1>
+                    <City>Inver Grove Heights</City>
+                    <StateProvince>MN</StateProvince>
+                    <PostalCode>55117</PostalCode>
+                    <CountryCode>US</CountryCode>
+                </Address>
                 <CommunicationNumbers>
                     <PrimaryTelephone>
                         <Number>7179758659</Number>
@@ -483,6 +491,7 @@ public static class XmlTemplates
                         <City>JONESVILLE</City>
                         <StateProvince>MN</StateProvince>
                         <PostalCode>37777</PostalCode>
+                        <CountryCode>US</CountryCode>
                     </Address>
                     <CommunicationNumbers>
                         <PrimaryTelephone>
