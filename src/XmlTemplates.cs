@@ -309,6 +309,9 @@ public static class XmlTemplates
                     <Identification>
                         {p.PrescriberNpiXml}
                     </Identification>
+                    <FormerName>
+                        <LastName>ALLEN</LastName>
+                    </FormerName>
                     <Name>
                         <LastName>ALLEN</LastName>
                         <FirstName>AARON</FirstName>
@@ -482,6 +485,9 @@ public static class XmlTemplates
                     <Identification>
                         <NPI>{p.PrescriberNpi}</NPI>
                     </Identification>
+                    <FormerName>
+                        <LastName>ALLEN</LastName>
+                    </FormerName>
                     <Name>
                         <LastName>ALLEN</LastName>
                         <FirstName>AARON</FirstName>

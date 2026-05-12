@@ -20,8 +20,16 @@ public static class Seeder
         var failures = 0;
         var results = new List<SeedResult>();
 
+        var skipEhr = Environment.GetEnvironmentVariable("SKIP_EHR") == "1";
+
         foreach (var tenant in Tenants.All)
         {
+            if (skipEhr && tenant.CustomerType == "EHR")
+            {
+                Console.WriteLine($"--- {tenant.Name} ({tenant.CustomerType}) --- SKIPPED (SKIP_EHR=1)");
+                continue;
+            }
+
             Console.WriteLine($"--- {tenant.Name} ({tenant.CustomerType}) ---");
 
             if (tenant.Seeds.Length == 0)
@@ -53,7 +61,7 @@ public static class Seeder
         Console.WriteLine();
         Console.WriteLine($"Results: {successes} accepted, {failures} failed.");
         if (failures > 0)
-            Console.WriteLine("Note: EHR tenant failures are expected if the test environment .NET 9 upgrade is pending.");
+            Console.WriteLine("Note: EHR failures are expected (Key Vault has wrong credential format). Use SKIP_EHR=1 to skip.");
         return failures > 0 && successes == 0 ? 1 : 0;
     }
 
